@@ -1,7 +1,11 @@
 <head>
+  <link rel="stylesheet" type="text/css" href="animate.css" />
+  <script src="viewportchecker.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script
+
     <style type="text/css">
 
-    .container {
+    /* .container {
       animation: fade-in 3s;
     }
 
@@ -12,7 +16,7 @@
       to {
         opacity: 1;
       }
-    }
+    } */
 
     .button {
       font: 16px Futura PT #615f5c
@@ -23,6 +27,29 @@
     }
 
     </style>
+
+    <script type="text/javascript">
+
+            $(function() {
+
+                var documentEl = $(document),
+                    fadeElem = $('.container');
+
+
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+                    });
+                });
+
+            });
+
+        </script>
+
 </head>
 
 
