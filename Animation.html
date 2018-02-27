@@ -1,23 +1,25 @@
-block-yui_3_17_2_1_1519763828636_4101   pink vest
+Article from https://www.droverrideshare.com/blog/2016/7/25/css-animations-and-squarespace
 
+1. Find the block ID of the item you want to animate
+block-yui_3_17_2_1_1519763828636_4101   pink vest
 block-yui_3_17_2_1_1519766482251_3790   bipartite
 
-Upload the animate.css file (downlaoded on your computer) on Squarespace
+2. Upload the animate.css file (downlaoded on your computer) on Squarespace
   by adding the file as a hyperlink to a text box and pressing on it once to view the end of the url we want
   The link should look something like this: https://daniel-elkeslassy-ckcd.squarespace.com/s/animations.css
     before the /s/... should be your Squarespace editing domain that
     Squarespace gives you when you are in the editor -- usually based on your name
 
-Add the correct Animate.css url and the block ID of the image to the code below:
+3. Add the correct Animate.css url and the block ID of the image to the code below:
 
-The following should be put into the header of Squarespace (Settings > Advanced > Code Injection) without the header tags
+4. The following should be put into the header of Squarespace (Settings > Advanced > Code Injection) without the header tags
 <header>
   <link rel="stylesheet" type="text/css" href="https://daniel-elkeslassy-ckcd.squarespace.com/s/animations.css" />
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </header>
 
 
-In a code block
+5. In a code block, add the following
 <div id="#block-yui_3_17_2_1_1519766482251_3790" class="slideUp">
   <script>
   $(window).scroll(function () {
@@ -35,7 +37,7 @@ In a code block
   </script>
 
 
-In Custom CSS section of Squarespace (Design > Custom CSS)
+6. In Custom CSS section of Squarespace (Design > Custom CSS)
 #block-yui_3_17_2_1_1519766482251_3790{
   background-color: #ffffff;
   visibility: hidden;
