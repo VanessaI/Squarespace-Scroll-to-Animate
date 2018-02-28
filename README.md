@@ -6,9 +6,9 @@ You will find the animation library in the file animation-updated.css. It contai
 
 ## Using the Code
 
-Before anything, you must collect a few things from your website:
-1. The block ID of the image/text/etc. you want to animate.
-2. 
+Before anything, you must collect the following information from your website:
+[x] The block ID of the item(s) (image(s), text box(es), etc.) you want to animate. It should look something like this
+block-yui_3_17_2_4_1518721064515_12290
 
 #### Step 1
 
